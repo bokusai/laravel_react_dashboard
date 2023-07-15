@@ -9,6 +9,7 @@ import SideBarHeader from './SidebarHeader';
 import { RxDashboard } from 'react-icons/rx';
 import { TbBrandGoogleAnalytics } from 'react-icons/tb';
 import { SlCalender } from 'react-icons/sl';
+import { BsCodeSlash } from 'react-icons/Bs';
 
 const NavigationData = [
 	{
@@ -22,9 +23,9 @@ const NavigationData = [
 		name: 'About',
 	},
 	{
-		to: 'calender',
-		icon: SlCalender,
-		name: 'Calender',
+		to: 'designparts',
+		icon: BsCodeSlash,
+		name: 'Designparts',
 	},
 ];
 
@@ -40,22 +41,17 @@ const Sidebar:React.FC<{}> = () => {
 						title="Menu"
 					>
 						<SidebarList>
-							{
-								NavigationData.map((item, index) => {
-									return (
-										<SidebarListItem
-											to={item.to}
-											key={index}
-										>
-											<item.icon />
-											<label>
-												{item.name}
-											</label>
-										</SidebarListItem>
-									);
-									
-								})
-							}
+							{ NavigationData.map((item, index) => (
+								<SidebarListItem
+									to={item.to}
+									key={index}
+								>
+									<item.icon />
+									<label>
+										{item.name}
+									</label>
+								</SidebarListItem>
+							)) }
 						</SidebarList>
 					</SidebarBlock>
 				</div>

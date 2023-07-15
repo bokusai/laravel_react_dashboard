@@ -6,12 +6,14 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@tanstack/react-query": "^4.29.23",
+        "@tanstack/react-query-devtools": "^4.29.23",
         "@types/node": "^20.4.1",
         "@types/react": "^18.2.14",
         "@types/react-dom": "^18.2.6",
         "@vitejs/plugin-react": "^4.0.2",
         "autoprefixer": "^10.4.14",
-        "axios": "^1.1.2",
+        "axios": "^1.4.0",
         "laravel-vite-plugin": "^0.7.5",
         "postcss": "^8.4.25",
         "react": "^18.2.0",
