@@ -7,13 +7,8 @@ import Card from '../components/Card';
 import CommonTable from '../components/CommonTable';
 import Loading from '../components/Loading';
 
-
 const Home = () => {
 	const { data, isLoading, error } = useGetCommonTable();
-
-	if (isLoading) return 'loading';
-
-	if (error)  return 'error'
 
 	return (
 		<>
@@ -29,10 +24,10 @@ const Home = () => {
 					>
 						table component
 					</h4>
-					<Loading isLoading={isLoading}>
+					<Loading isLoading={isLoading} isError={!!error}>
 						<CommonTable
-							headers={data?.data.headers}
-							bodyRecords={data?.data.bodyRecords}
+							headers={data?.headers}
+							bodyRecords={data?.bodyRecords}
 						/>
 					</Loading>
 				</Card>

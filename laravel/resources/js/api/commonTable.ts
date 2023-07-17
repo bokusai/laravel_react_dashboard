@@ -10,9 +10,9 @@ type commonTable = {
 export const useGetCommonTable = () => {
 	return useQuery({
 		queryKey: ['commontable'], 
-		queryFn: async () => {
+		queryFn: async <commonTable>() => {
 			const result = await axios.get('/api/test/commontable', {});
-			return result;
+			return result.data;
 		},
 	});
 }

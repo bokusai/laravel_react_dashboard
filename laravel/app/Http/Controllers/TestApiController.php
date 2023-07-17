@@ -14,9 +14,9 @@ class TestApiController extends Controller
 		return response()->json(
 			[
 				'headers' => [
-					'test header',
-					'test header',
-					'test header',
+					'test header 1',
+					'test header 2',
+					'test header 3',
 				],
 				'bodyRecords' => [
 					[

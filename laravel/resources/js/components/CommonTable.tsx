@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 
 const CommonTable: React.FC<{
-	headers: (ReactNode|string)[],
-	bodyRecords: (ReactNode|string)[][]
+	headers?: (ReactNode|string)[],
+	bodyRecords?: (ReactNode|string)[][]
 }> = ({headers, bodyRecords}) => {
 	return (
 		<div
@@ -15,7 +15,7 @@ const CommonTable: React.FC<{
 					<tr
 						className='bg-gray-100'
 					>
-						{ headers.map((header, index) => {
+						{ headers?.map((header, index) => {
 							return (
 								<th 
 									className='py-4 px-5'
@@ -30,7 +30,7 @@ const CommonTable: React.FC<{
 				<tbody
 					className=''
 				>
-					{ bodyRecords.map((contents, index) => (
+					{ bodyRecords?.map((contents, index) => (
 							<tr
 								className='border-solid border-2 border-gray-100'
 								key={index}
