@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\TestApiController;
+use App\Http\Controllers\ProjectController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -22,3 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/test/commontable', [TestApiController::class, 'commontable']);
+
+Route::get('/project', [ProjectController::class, 'list']);
